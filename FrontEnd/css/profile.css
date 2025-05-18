@@ -1,0 +1,669 @@
+/**
+ * BurWeb - Profile Page Styles
+ */
+
+:root {
+    --color-background: #D4E4D3;    /* Verde Pastel */
+    --color-text: #3B4C44;          /* Gris oscuro verdoso */
+    --color-accent: #D1A03D;        /* Amarillo dorado */
+    --color-button: #D1A03D;        /* Verde Oliva Oscuro */
+    --color-border: #FFB066;        /* Naranja Cálido */
+    --font-main: 'Montserrat', sans-serif;
+    --font-logo: 'Bungee', cursive;
+}
+
+.profile-banner {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: rgba(209, 160, 61, 0.1);
+    margin-bottom: 30px;
+}
+
+.profile-banner h1 {
+    font-family: var(--font-logo);
+    color: var(--color-text);
+    font-size: 2.5rem;
+    margin: 0 0 15px 0;
+}
+
+.profile-banner p {
+    font-family: var(--font-main);
+    color: var(--color-text);
+    font-size: 1.1rem;
+    margin: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.profile-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+}
+
+.profile-loading {
+    text-align: center;
+    padding: 50px 0;
+    color: var(--color-text);
+}
+
+.profile-loading i {
+    font-size: 2.5rem;
+    color: var(--color-accent);
+    margin-bottom: 15px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h2 {
+    margin: 0 0 5px 0;
+    color: var(--color-text);
+    font-family: var(--font-main);
+    font-size: 1.8rem;
+}
+
+.profile-email {
+    color: #666;
+    margin: 0 0 5px 0;
+}
+
+.profile-type {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: white;
+    padding: 3px 10px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.profile-content {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.profile-section {
+    padding: 25px;
+    border-bottom: 1px solid #eee;
+}
+
+.profile-section:last-child {
+    border-bottom: none;
+}
+
+.profile-section h3 {
+    margin: 0 0 15px 0;
+    color: var(--color-text);
+    font-family: var(--font-main);
+    font-size: 1.3rem;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.profile-field {
+    display: flex;
+    margin-bottom: 10px;
+    padding: 5px 0;
+}
+
+.profile-field:last-child {
+    margin-bottom: 0;
+}
+
+.field-label {
+    width: 150px;
+    font-weight: 600;
+    color: #666;
+}
+
+.field-value {
+    flex: 1;
+    color: var(--color-text);
+}
+
+.profile-button {
+    background-color: var(--color-accent);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-family: var(--font-main);
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.profile-button:hover {
+    background-color: #b58a2e;
+}
+
+.profile-button.secondary {
+    background-color: #999;
+}
+
+.profile-button.secondary:hover {
+    background-color: #777;
+}
+
+/* Estilos para la sección de historial de pedidos */
+.order-history-section {
+    padding-bottom: 30px;
+}
+
+.orders-loading,
+.orders-error,
+.no-orders-message {
+    text-align: center;
+    padding: 30px 0;
+    color: var(--color-text);
+}
+
+.orders-loading i,
+.orders-error i {
+    font-size: 2rem;
+    color: var(--color-accent);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.orders-error i {
+    color: #e74c3c;
+}
+
+.action-btn {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: var(--color-accent);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.action-btn:hover {
+    background-color: #b58a2e;
+}
+
+/* Tabla de pedidos */
+.orders-table {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.orders-table-header {
+    display: flex;
+    background-color: var(--color-accent);
+    color: white;
+    font-weight: 600;
+    padding: 12px 15px;
+}
+
+.orders-table-row {
+    display: flex;
+    border-bottom: 1px solid #eee;
+    background-color: white;
+    transition: background-color 0.2s;
+}
+
+.orders-table-row:last-child {
+    border-bottom: none;
+}
+
+.orders-table-row:hover {
+    background-color: #f9f9f9;
+}
+
+.order-cell {
+    flex: 1;
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.view-order-btn {
+    background-color: var(--color-accent);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-family: var(--font-main);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.view-order-btn:hover {
+    background-color: #b58a2e;
+}
+
+/* Modal de detalles de pedido */
+.order-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.order-modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 0;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.order-modal-header {
+    background-color: var(--color-accent);
+    color: white;
+    padding: 20px;
+    border-radius: 8px 8px 0 0;
+}
+
+.order-modal-header h2 {
+    margin: 0 0 5px 0;
+    font-family: var(--font-logo);
+    font-size: 1.5rem;
+}
+
+.order-modal-header p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.order-modal-details {
+    padding: 20px;
+}
+
+.order-modal-details h3 {
+    margin: 20px 0 10px 0;
+    color: var(--color-text);
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+}
+
+.order-modal-details h3:first-child {
+    margin-top: 0;
+}
+
+/* Tabla de productos en el modal */
+.order-products-table {
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.order-products-header {
+    display: flex;
+    background-color: #f5f5f5;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.order-products-row {
+    display: flex;
+    border-bottom: 1px solid #eee;
+}
+
+.order-products-row:last-child {
+    border-bottom: none;
+}
+
+.product-cell {
+    flex: 1;
+    padding: 10px 15px;
+}
+
+/* Resumen del pedido */
+.order-summary {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.order-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--color-text);
+}
+
+/* Info de envío y pago */
+.order-shipping-info,
+.order-payment-info {
+    padding: 0 10px;
+}
+
+.order-shipping-info p,
+.order-payment-info p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+/* Loading y error en el modal */
+.order-loading,
+.order-error {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.order-loading i,
+.order-error i {
+    font-size: 2rem;
+    color: var(--color-accent);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.order-error i {
+    color: #e74c3c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-avatar {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .profile-field {
+        flex-direction: column;
+    }
+
+    .field-label {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .orders-table-header,
+    .orders-table-row {
+        flex-wrap: wrap;
+    }
+
+    .order-cell {
+        flex: 0 0 50%;
+    }
+
+    .orders-table-header .order-cell:nth-child(4),
+    .orders-table-row .order-cell:nth-child(4) {
+        flex: 0 0 100%;
+        justify-content: center;
+        padding-top: 5px;
+    }
+
+    .order-modal-content {
+        margin: 10% auto;
+        width: 95%;
+    }
+
+    .order-products-header,
+    .order-products-row {
+        flex-direction: column;
+    }
+
+    .product-cell {
+        padding: 8px 15px;
+    }
+
+    .order-products-header {
+        display: none;
+    }
+
+    .product-cell:nth-child(1)::before {
+        content: "Producto: ";
+        font-weight: 600;
+    }
+
+    .product-cell:nth-child(2)::before {
+        content: "Precio: ";
+        font-weight: 600;
+    }
+}
+
+/* Address section styles */
+.profile-address {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    border: 1px solid #eee;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-address:hover {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.favourite-address {
+    border-color: var(--color-accent);
+    background-color: rgba(209, 160, 61, 0.05);
+}
+
+.address-badge {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    background-color: var(--color-accent);
+    color: white;
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.address-content {
+    flex: 1;
+}
+
+.address-line {
+    margin: 0 0 5px 0;
+    color: var(--color-text);
+}
+
+.address-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.address-action {
+    background-color: transparent;
+    border: none;
+    color: #999;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 5px;
+}
+
+.address-action:hover {
+    color: var(--color-accent);
+}
+
+.address-action.delete-address:hover {
+    color: #e74c3c;
+}
+
+.make-default {
+    background-color: var(--color-accent);
+    color: white;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.make-default:hover {
+    background-color: #b58a2e;
+}
+
+.add-address-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .profile-address {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .address-actions {
+        margin-top: 10px;
+        align-self: flex-end;
+    }
+
+    .address-badge {
+        top: -8px;
+        right: 8px;
+        font-size: 0.65rem;
+    }
+}
+
+.addresses-container {
+    width: 100%;
+}
+
+.profile-address {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+    position: relative;
+    border: 1px solid #eee;
+    transition: box-shadow 0.3s ease;
+}
+
+.profile-address:last-child {
+    margin-bottom: 0;
+}
+
+.profile-address:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.favourite-address {
+    border-color: var(--color-accent);
+    background-color: rgba(209, 160, 61, 0.05);
+}
+
+.address-badge {
+    position: absolute;
+    top: -8px;
+    right: 8px;
+    background-color: var(--color-accent);
+    color: white;
+    font-size: 0.65rem;
+    padding: 1px 6px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.address-content {
+    width: 100%;
+}
+
+.address-line {
+    margin: 0 0 4px 0;
+    color: var(--color-text);
+    font-family: var(--font-main);
+    font-size: 0.9rem;
+}
+
+.address-line:last-child {
+    margin-bottom: 0;
+}
+
+/* Special styling for the address field label */
+.addresses-field .field-label {
+    align-self: flex-start;
+    padding-top: 5px;
+}
+
+/* Ensure no actions are displayed */
+.address-actions {
+    display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .profile-field.addresses-field {
+        flex-direction: column;
+    }
+
+    .addresses-field .field-label {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .profile-address {
+        padding: 10px;
+    }
+
+    .address-badge {
+        font-size: 0.6rem;
+        top: -7px;
+        right: 7px;
+    }
+
+    .address-line {
+        font-size: 0.85rem;
+    }
+}
